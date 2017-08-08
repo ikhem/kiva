@@ -4,7 +4,8 @@
   font-size: 28px;
   background-color: #63a541;
   color: white;
-  margin: 0px; }
+  margin: 0px;
+  border: none; }
 
 .navbar-header {
   background-color: #F16E10; }
