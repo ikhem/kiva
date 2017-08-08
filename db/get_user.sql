@@ -1,2 +1,2 @@
 SELECT * FROM lenders
-WHERE email = $1
+WHERE authId = $1

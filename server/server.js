@@ -25,26 +25,32 @@ passport.use(new Auth0Strategy({
   domain: keys.domain,
   clientID: keys.clientID,
   clientSecret: keys.clientSecret,
-  callbackURL: 'http://localhost:3000/auth/callback'
+  callbackURL: 'http://localhost:3001/auth/callback'
 }, function(accessToken, refreshToken, extraParams, profile, done) {
   //Go to db to find and create user
-  let db = app.get('db');
+    let db = app.get('db')
+    , authId = profile.id
+    , email = profile.emails[0].value
+    , givenName = profile.name.givenName || "anonymous"
+    , familyName = profile.name.familyName || "anonymous"
+    , nickname = profile.nickname || "anonymous"
+    , picture = profile.picture;
 
-  db.get_user([profile.email]).then( user => {
-    console.log(user);
-    if(user.length){
-      return done(null, profile); // Go to serialize user when done is invoked
+  db.get_user([authId]).then( user => {
+    if(!user.length){
+      db.create_user([authId, email, givenName, familyName, nickname])
+      .then((userCreated) => {
+        return done(null, profile) // Go to serialize user when done is invoked
+      }).catch( (e) => console.log(e))
     } else {
-      console.log(profile.name.givenName)
+      return done(null, profile); // Go to serialize user when done is invoked
     }
   }).catch(err => console.log('check failed', err));
-
-  return done(null, profile); // Go to serialize user when done is invoked
 }));
 
 app.get('/auth', passport.authenticate('auth0'));
 app.get('/auth/callback',
-  passport.authenticate('auth0', {successRedirect: '/me'}));
+  passport.authenticate('auth0', {successRedirect: 'http://localhost:3000/Profile'}));
 
 passport.serializeUser(function(profileToSession, done) {
   done(null, profileToSession); // Puts second argument on session (profile)
@@ -55,7 +61,7 @@ passport.deserializeUser(function(profileFromSession, done) {
   done(null, profileFromSession);
 });
 
-app.get('/me', function(req, res){
+app.get('/api/Profile', function(req, res){
   res.send(req.user)
 })
 
@@ -76,7 +82,7 @@ massive('postgres://qxcjfjmp:RSfd5jALpVgRaeefqISBrCKgVMl5aHr0@stampy.db.elephant
   db.create_tables()
 })
 
-const port = 3000;
+const port = 3001;
 app.listen(port, () => {
   console.log(`Server listening on ${port}.`)
 });

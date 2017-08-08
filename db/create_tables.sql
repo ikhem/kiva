@@ -1,8 +1,10 @@
 CREATE TABLE IF NOT EXISTS lenders (
   id SERIAL PRIMARY KEY,
+  authId TEXT NOT NULL,
   firstName VARCHAR(40) NOT NULL,
   lastName VARCHAR(40) NOT NULL,
-  email VARCHAR(80) NOT NULL
+  email VARCHAR(80) NOT NULL,
+  profileName VARCHAR(40)
 );
 
 CREATE TABLE IF NOT EXISTS borrowers (

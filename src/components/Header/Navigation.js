@@ -5,43 +5,37 @@ import { Link } from 'react-router-dom';
 
 export default class Navigation extends React.Component {
 
-  constructor(props){
-    super(props)
-    this.state = { isOpen: false }
-  }
+  // constructor(props){
+  //   super(props)
+  //   this.state = { isOpen: false }
+  // }
 
-  handleOpen = () => {
-    this.setState({ isOpen: true })
-  }
+  // handleOpen = () => {
+  //   this.setState({ isOpen: true })
+  // }
 
-  handleClose = () => {
-    this.setState({ isOpen: false })
-  }
-
+  // handleClose = () => {
+  //   this.setState({ isOpen: false })
+  // }
   render() {
 
-    let topNav = {
-      'background-color': 'rgb(99, 165, 65)',
-      'color': 'white',
-      'font-weight': 'bold',
-    };
-
     return (
-      <Navbar className='topNav'>
+      <Navbar>
         <Navbar.Header>
           <Navbar.Brand>
             <Link to="/">Kiva</Link>
           </Navbar.Brand>
         </Navbar.Header>
         <Nav>
-          <NavDropdown
+          {/* <NavDropdown
             onMouseEnter = { this.handleOpen }
             onMouseLeave = { this.handleClose }
             open={ this.state.isOpen }
             title="Lend" 
             className="menuItem" 
             href="/Lend"
-          >
+          > */}
+          <NavDropdown title="Lend">
             Categories
             <MenuItem>Women</MenuItem>
             <MenuItem>Agriculture</MenuItem>
@@ -76,7 +70,7 @@ export default class Navigation extends React.Component {
             <MenuItem>Press</MenuItem>
             <MenuItem>Due Diligence</MenuItem>
           </NavDropdown>
-          <NavItem><Link to="/SignIn">Sign in</Link></NavItem>
+          <NavItem href="http://localhost:3001/auth/">Sign In</NavItem>
         </Nav>
       </Navbar>
     );

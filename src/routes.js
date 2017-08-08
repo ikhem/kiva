@@ -10,6 +10,7 @@ import About from './components/About/About';
 import Help from './components/Help/Help';
 import Career from './components/Career/Career';
 import SiteMap from './components/SiteMap/SiteMap';
+import Profile from './components/Profile/Profile'
 
 import Foot from './components/Footer/Foot';
 import { Privacy, Terms } from './components/Footer/Legal';
@@ -27,6 +28,7 @@ export default(
       <Route path='/SiteMap' component={SiteMap} />
       <Route path='/Legal/Privacy' component={Privacy} />
       <Route path='/Legal/Terms' component={Terms} />
+      <Route path='/Profile' component={Profile} />
     </Switch>
     <Foot />
   </div>

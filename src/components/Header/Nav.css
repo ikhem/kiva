@@ -1,11 +1,15 @@
-.topNav {
-  font-family: 'sans-serif';
-  font-weight: 'bold';
-  font-size: 28px;
+.navbar {
   background-color: #63a541;
-  color: white;
+  font-weight: bold;
+  font-family: 'sans-serif';
+  font-size: 20px;
   margin: 0px;
   border: none; }
+  .navbar a {
+    color: white;
+    font-family: sans-serif; }
 
-.navbar-header {
-  background-color: #F16E10; }
+.navbar-default .navbar-brand {
+  color: white;
+  font-family: sans-serif;
+  font-size: 20px; }
