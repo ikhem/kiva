@@ -6,6 +6,7 @@ export default class Landing extends React.Component {
   render(){
     return (
       <div>
+        <Karousel />
         <HowItWorks />
         <h1>Start Lending</h1>
         <h1>Follow Us</h1>
