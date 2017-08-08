@@ -1,2 +1,7 @@
-.Karousel {
+.carousel {
   height: 400px; }
+  .carousel img {
+    display: inline-block;
+    width: 50%;
+    height: 500px;
+    margin: 0; }

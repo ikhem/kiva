@@ -19,6 +19,13 @@ export default class Navigation extends React.Component {
   }
 
   render() {
+
+    let topNav = {
+      'background-color': 'rgb(99, 165, 65)',
+      'color': 'white',
+      'font-weight': 'bold',
+    };
+
     return (
       <Navbar className='topNav'>
         <Navbar.Header>

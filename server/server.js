@@ -29,12 +29,13 @@ passport.use(new Auth0Strategy({
 }, function(accessToken, refreshToken, extraParams, profile, done) {
   //Go to db to find and create user
   let db = app.get('db');
+
   db.get_user([profile.email]).then( user => {
     console.log(user);
     if(user.length){
-      db.create_user()
-    } else {
       return done(null, profile); // Go to serialize user when done is invoked
+    } else {
+      console.log(profile.name.givenName)
     }
   }).catch(err => console.log('check failed', err));
 

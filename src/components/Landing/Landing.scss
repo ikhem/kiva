@@ -1,3 +1,15 @@
-.Karousel {
+// .Karousel {
+//   height: 400px;
+//   width: 100%;
+// }
+
+.carousel {
   height: 400px;
+
+  img {
+    display: inline-block;
+    width: 50%;
+    height: 500px;
+    margin: 0;
+  }
 }
