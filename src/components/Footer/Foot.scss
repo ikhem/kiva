@@ -1,0 +1,32 @@
+$footer-color: rgb(35, 97, 51);
+$footer-text-color: rgb(145, 189, 71);
+
+.Foot {
+  background-color: $footer-color;
+  text-align: center;
+
+  .Nav {
+    padding-top: 30px;
+    margin-bottom: 20px;
+  }
+
+  a {
+    padding: 30px;
+    font-weight: bold;
+    color: $footer-text-color;
+    font-family: sans-serif;
+  }
+
+  .Nav-bottom {
+    padding-bottom: 30px;
+  }
+
+  .copyright {
+    color: white;
+    margin-bottom: 50px;
+  }
+
+  .warning {
+    margin-bottom: 15px;
+  }
+}

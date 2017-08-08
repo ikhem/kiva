@@ -1,0 +1,18 @@
+.Foot {
+  background-color: #236133;
+  text-align: center; }
+  .Foot .Nav {
+    padding-top: 30px;
+    margin-bottom: 20px; }
+  .Foot a {
+    padding: 30px;
+    font-weight: bold;
+    color: #91bd47;
+    font-family: sans-serif; }
+  .Foot .Nav-bottom {
+    padding-bottom: 30px; }
+  .Foot .copyright {
+    color: white;
+    margin-bottom: 50px; }
+  .Foot .warning {
+    margin-bottom: 15px; }
