@@ -36,28 +36,29 @@ export default class Navigation extends React.Component {
             href="/Lend"
           > */}
           <NavDropdown title="Lend">
-            Categories
-            <MenuItem>Women</MenuItem>
-            <MenuItem>Agriculture</MenuItem>
-            <MenuItem>Education</MenuItem>
-            <MenuItem>Health</MenuItem>
-            <MenuItem>Single Parents</MenuItem>
-            <MenuItem>Refugees and IDPs</MenuItem>
-            <MenuItem>Food</MenuItem>
-            <MenuItem>Kiva U.S.</MenuItem>
-            <MenuItem>Expiring Soon</MenuItem>
-            <MenuItem>Social Enterprises</MenuItem>
-            <MenuItem>Retail Businesses</MenuItem>
-            <MenuItem>Arts</MenuItem>
-            <MenuItem>Green</MenuItem>
-            <MenuItem>Water and Sanitation</MenuItem>
-            <MenuItem>Conflict Zones</MenuItem>
-            <MenuItem>Men</MenuItem>
-            <MenuItem>Underbanked Areas</MenuItem>
-            <MenuItem>Groups</MenuItem>
-            <MenuItem>Short-Term Loans</MenuItem>
-            <MenuItem>All Categories</MenuItem>
-            <MenuItem>All Loans</MenuItem>
+            <p>Categories</p>
+              <MenuItem>Women</MenuItem>
+              <MenuItem>Agriculture</MenuItem>
+              <MenuItem>Education</MenuItem>
+              <MenuItem>Health</MenuItem>
+              <MenuItem>Single Parents</MenuItem>
+              <MenuItem>Refugees and IDPs</MenuItem>
+              <MenuItem>Food</MenuItem>
+              <MenuItem>Kiva U.S.</MenuItem>
+              <MenuItem>Expiring Soon</MenuItem>
+              <MenuItem>Social Enterprises</MenuItem>
+              <MenuItem>Retail Businesses</MenuItem>
+              <MenuItem>Arts</MenuItem>
+              <MenuItem>Green</MenuItem>
+              <MenuItem>Water and Sanitation</MenuItem>
+              <MenuItem>Conflict Zones</MenuItem>
+              <MenuItem>Men</MenuItem>
+              <MenuItem>Underbanked Areas</MenuItem>
+              <MenuItem>Groups</MenuItem>
+              <MenuItem>Short-Term Loans</MenuItem>
+              <br/>
+              <MenuItem>All Categories</MenuItem>
+              <MenuItem>All Loans</MenuItem>
           </NavDropdown>
           <NavDropdown 
             title="About" 
